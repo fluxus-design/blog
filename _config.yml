@@ -13,13 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-author: Fernanda Bertola
+author: Fluxus Desgin
 email: febertola.luiz@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Um blog pessoal e portfólio de uma desenvolvedora web.
-  Aqui você encontrará as melhores práticas de desenvolvimento
-  e notícias sobre o mundo front-end.
-baseurl: "crispy-octo-fiesta/" # the subpath of your site, e.g. /blog
+  Um blog sobre boas práticas de design.
+baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://fluxus-design.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Show excerpts on the homepage
@@ -30,8 +28,7 @@ minima:
 
   # Generate social links in footer
   social_links:
-    github: febertola
-    linkedin: fernandabertola
+    github: fluxus-design
 
 header_pages:
   - blog/blog.md
@@ -74,15 +71,15 @@ defaults:
     scope:
       path: ""
     values:
-      author: "Fernanda Bertola"
+      author: "Fluxus Design"
   -
     scope:
       type: "posts"
     values:
       layout: "post"
       img:
-        url: "../../assets/images/blog-logo.jpg"
-        alt: "Logo do blog da Fernanda Bertola"
+        url: "../blog/assets/images/blog-logo.jpg"
+        alt: "Logo do blog"
   -
     scope:
       path: "_posts/infra"
