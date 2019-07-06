@@ -1,20 +1,56 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{%- include head.html -%}
 
-  {%- include head.html -%}
+<body>
+  {%- include header.html -%}
 
-  <body>
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </main>
 
-    {%- include header.html -%}
+  {%- include footer.html -%}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="{{ 'assets/js/script.js' | relative_url }}"></script>
+  <script>
+    /* Image lazy load */
+    echo.init({
+      offset: 2500,
+      throttle: 250,
+      unload: false,
+      callback: function (element, op) {
+      }
+    });
 
-    {%- include footer.html -%}
-
-  </body>
+    {%- if page.url == "/" -%}
+    /* TAG FILTERS */
+    $(document).ready(function () {
+      $('.posts-feed-filter li a').click(function (event) {
+        event.preventDefault();
+        /* fetch the class of the clicked item */
+        var ourClass = $(this).attr('class');
+        /* reset the active class on all the buttons */
+        $('.posts-feed-filter li').removeClass('active');
+        /* update the active state on our clicked button */
+        $(this).parent().addClass('active');
+        if (ourClass == 'all') {
+          /* show all our items */
+          $('.holder').children('.feed-card').show();
+        }
+        else {
+          /* hide all elements that don't share ourClass */
+          $('.holder').children('.feed-card:not(.' + ourClass + ')').hide();
+          /* show all elements that do share ourClass */
+          $('.holder').children('.feed-card.' + ourClass).show();
+        }
+        return false;
+      });
+    });
+    {%- endif -%}
+  </script>
+</body>
 
 </html>

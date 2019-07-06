@@ -1,13 +1,50 @@
 ---
-layout: page
-title: Blog
+layout: default
 permalink: /blog/
 ---
 
-{%- if site.posts.size > 0 -%}
-  <div class="post-list">
-    {%- for post in site.posts -%}
-      {%- include post-list-item.html -%}
-    {%- endfor -%}
+<div class="posts-feed">
+  {%-include feed-filter.html -%}
+
+  <!-- class holder is used to bind jquery events (change wisely but do not remove) -->
+  <div class="post-feed-content holder">
+    {%- assign posts = site.posts | sort: 'date' | reverse-%}
+    {%- for post in posts -%}
+      <a class="feed-card {% for item in post.categories %} {{ item }}{% endfor %}"
+        href="{{ post.link}}" title="{{ post.title }}" target="_blank">
+
+        <div class="feed-card-img">
+          <img src="{{ site.baseurl }}/{{ page.image }}" data-echo="{{ post.image }}"
+            alt="{{ post.title }}" width="800" height="400" />
+        </div>
+
+        <div class="feed-card-content">
+          <h3>{{ post.author | default: site.author }}</h3>
+          <h2>{{ post.title }}</h2>
+          <p class="clamp">{{ post.description }}</p>
+          <span class="date">
+            {% assign month = post.date | date: "%-m" %}
+            {{ post.date | date: "%d" }} de
+
+            {% case month %}
+              {% when '1' %}Janeiro
+              {% when '2' %}Fevereiro
+              {% when '3' %}Março
+              {% when '4' %}Abril
+              {% when '5' %}Maio
+              {% when '6' %}Junho
+              {% when '7' %}Julho
+              {% when '8' %}Agosto
+              {% when '9' %}Setembro
+              {% when '10' %}Outubro
+              {% when '11' %}Novembro
+              {% when '12' %}Dezembro
+            {% endcase %}
+
+            de {{ post.date | date: "%Y" }}
+          </span>
+        </div>
+      </a>
+    {% endfor %}
   </div>
-{%- endif -%}
+</div>
