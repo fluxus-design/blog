@@ -1,7 +1,7 @@
 author: Fluxus Desgin
 description: >-
   Um blog sobre boas práticas de design.
-baseurl: "/blog"
+baseurl: ""
 url: "https://fluxus-design.github.io"
 
 minima:
