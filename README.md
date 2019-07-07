@@ -2,7 +2,7 @@
 
 ## About this project
 
-This project is a personal blog and portfolio web site, hosted on [Github Pages](https://febertola.github.io/blog/).
+This project is a personal blog and portfolio web site, hosted on [Github Pages](https://fluxus-design.github.io).
 
 ## Project Details
 

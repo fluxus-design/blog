@@ -5,7 +5,7 @@
 @import "minima";
 
 .img-nav {
-  background-color: #F9EFDD;
+  background-color: #f9efdd;
 
   img {
     width: 50%;
@@ -54,7 +54,7 @@ body {
 @media screen and (max-device-width: 720px) {
   /* Change Color of Tap Highlight in Touch Devices */
   html {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.5);
+    -webkit-tap-highlight-color: transparent;
   }
   body {
     -webkit-text-size-adjust: none;
@@ -509,6 +509,10 @@ RESPONSIVE
 /* SCREENS (720px)
 ---------------------------------------- */
 @media only screen and (min-width: 720px) and (max-width: 959px) {
+  .img-nav img {
+    width: 60%;
+  }
+
   html {
     font-size: 59%;
   }
@@ -537,13 +541,12 @@ RESPONSIVE
 /* MOBILE (719px or Less)
 ---------------------------------------- */
 @media only screen and (max-width: 719px) {
-  html {
-    font-size: 57%;
+  .img-nav img {
+    width: 65%;
   }
 
-  .site-header {
-    position: fixed;
-    z-index: 100;
+  html {
+    font-size: 57%;
   }
 
   .post-feed-content {
@@ -724,12 +727,11 @@ RESPONSIVE
     margin-right: auto;
   }
   .posts-feed-filter {
-    margin: 0 auto 1.2rem;
+    margin: 2rem 0;
     white-space: nowrap;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 1rem;
-    width: 100%;
     transform: translate3d(0, 0, 0);
   }
 
@@ -771,6 +773,15 @@ RESPONSIVE
 /* MOBILE (576px or Less)
 ---------------------------------------- */
 @media only screen and (max-width: 576px) {
+  .footer-container {
+    text-align: center;
+
+    p {
+      display: block;
+      margin: 1rem 0;
+    }
+  }
+
   .post-feed-content {
     display: block;
   }

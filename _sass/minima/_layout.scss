@@ -2,12 +2,13 @@
  * Site header
  */
 .site-header {
-  background-color: #F9EFDD;
   min-height: $spacing-unit * 1.865;
   line-height: $base-line-height * $base-font-size * 2.25;
-
-  // Positioning context for the mobile navigation icon
-  position: relative;
+  border-bottom: 1px solid #e8e8e8;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  z-index: 2;
 }
 
 .site-title {
@@ -113,6 +114,39 @@
 /**
  * Site footer
  */
+
+.footer-img {
+  width: 15rem;
+}
+
+.footer-description {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.65;
+  opacity: 0.85;
+  margin-left: 2rem;
+}
+
+.footer-links {
+  float: right;
+
+  ul {
+    margin: 0;
+
+    li {
+      a {
+        padding: 0;
+
+        svg {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
 .site-footer {
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
@@ -181,7 +215,6 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
   flex: 1 0 auto;
 }
 
@@ -242,18 +275,18 @@
   padding: 20px 35px;
 
   p {
-    opacity: .85;
+    opacity: 0.85;
     line-height: 1.65;
     font-size: 14px;
   }
 }
 
 .post-meta {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 12px;
   letter-spacing: 1px;
   color: #333;
-  opacity: .72;
+  opacity: 0.72;
 }
 
 .text-upper {
