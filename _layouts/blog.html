@@ -7,26 +7,29 @@ permalink: /blog/
   {%-include feed-filter.html -%}
 
   <!-- class holder is used to bind jquery events (change wisely but do not remove) -->
-  <div class="post-feed-content holder">
+  <div class="posts-feed-content holder">
     {%- assign posts = site.posts | sort: 'date' | reverse-%}
     {%- for post in posts -%}
-      <a class="feed-card {% for item in post.categories %} {{ item }}{% endfor %}"
-        href="{{ post.link}}" title="{{ post.title }}" target="_blank">
+    <a class="feed-card {% for item in post.categories %} {{ item }}{% endfor %}" href="{{ post.link}}"
+      title="{{ post.title }}" target="_blank">
 
-        <div class="feed-card-img">
-          <img src="{{ site.baseurl }}/assets/images/loader.gif" data-echo="{{ post.image }}"
+      <img class="feed-card-img" src="{{ site.baseurl }}/assets/images/loader.gif" data-echo="{{ post.image }}"
+        alt="{{ post.title }}" width="800" height="400" />
+
+      <div class="feed-card-content">
+        <h2 class="card-title">{{ post.title }}</h2>
+        <p class="card-excerpt">{{ post.description }}</p>
+        <div class="card-meta">
+          <img class="author-img" src="{{ site.baseurl }}/assets/images/loader.gif" data-echo="{{ post.author-image }}"
             alt="{{ post.title }}" width="800" height="400" />
-        </div>
 
-        <div class="feed-card-content">
-          <h3>{{ post.author | default: site.author }}</h3>
-          <h2>{{ post.title }}</h2>
-          <p class="clamp">{{ post.description }}</p>
-          <span class="date">
-            {% assign month = post.date | date: "%-m" %}
-            {{ post.date | date: "%d" }} de
+          <div class="author-name">
+            <h3>{{ post.author | default: site.author }}</h3>
+            <span>
+              {% assign month = post.date | date: "%-m" %}
+              {{ post.date | date: "%d" }} de
 
-            {% case month %}
+              {% case month %}
               {% when '1' %}Janeiro
               {% when '2' %}Fevereiro
               {% when '3' %}Março
@@ -39,12 +42,14 @@ permalink: /blog/
               {% when '10' %}Outubro
               {% when '11' %}Novembro
               {% when '12' %}Dezembro
-            {% endcase %}
+              {% endcase %}
 
-            de {{ post.date | date: "%Y" }}
-          </span>
+              de {{ post.date | date: "%Y" }}
+            </span>
+          </div>
         </div>
-      </a>
+      </div>
+    </a>
     {% endfor %}
   </div>
 </div>

@@ -1,0 +1,50 @@
+$base-font-family: "IBM Plex Sans", sans-serif !default;
+$secondary-font-family: "IBM Plex Mono", sans-serif !default;
+$base-font-size: 1.6rem !default;
+$base-font-weight: 400 !default;
+$small-font-size: 0.875rem !default;
+$base-line-height: 1 !default;
+$spacing-unit: 3rem !default;
+
+$background-color: white !default;
+$border-radius: 4px;
+
+$woodsmoke: #0c0d0d;
+$gray:#828282;
+$christine:#f66a0a;
+$curious-blue: #2b85cb;
+$athens-gray: #e4e4eb;
+$cod-gray: #1b1b1b;
+$linen: #f9efdd;
+$raw-sienna: #ce6b48;
+
+$gray-light: lighten($gray, 40%);
+$gray-dark: darken($gray, 25%);
+
+$xs: 576px;
+$sm: 600px;
+$md: 720px;
+$lg: 800px;
+$xlg: 959px;
+
+@mixin media-query($screen) {
+  @media screen and (min-width: $screen) {
+    @content;
+  }
+}
+
+@mixin between-media-query($screen-min, $screen-max) {
+  @media screen and (min-width: $screen-min) and (max-width: $screen-max) {
+    @content;
+  }
+}
+
+@mixin device-media-query($device) {
+  @media screen and (max-device-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
