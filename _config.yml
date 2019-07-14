@@ -2,14 +2,14 @@ author: Fluxus Desgin
 description: >-
   Um blog sobre boas práticas de usabilidade.
 baseurl: ""
-url: "https://fluxus-design.github.io"
+url: "https://fluxus.github.io"
 
 minima:
   date_format: "%d %B, %Y"
 
   # Generate social links in footer
   social_links:
-    github: fluxus-design
+    github: fluxus
 
 # Build settings
 markdown: kramdown
@@ -31,5 +31,4 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      permalink: "/:categories/:title"
       image: assets/images/blog-logo.jpg
