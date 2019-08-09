@@ -5,7 +5,8 @@
 }
 
 .site-header {
-  background-color: #f9efdd;
+  background-color: $linen;
+  border-bottom: 1px solid $oyster-pink;
 
   &-img {
     width: 65%;
@@ -25,10 +26,11 @@
 }
 
 .site-footer {
-  padding: 3rem;
-
   .footer-container {
     text-align: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1.5rem;
 
     .footer-img {
       width: 15rem;
