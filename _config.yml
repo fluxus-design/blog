@@ -32,3 +32,4 @@ defaults:
     values:
       layout: "post"
       image: assets/images/blog-logo.jpg
+      author-image: assets/images/blog-logo.jpg
