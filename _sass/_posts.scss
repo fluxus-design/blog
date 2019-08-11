@@ -13,7 +13,8 @@
         display: inline-block;
         background: #fff;
         border-radius: 4px;
-        border: 1px solid #ce6b47;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.05);
+        color: $cod-gray;
         font-size: 1.3rem;
         padding: 1rem;
         min-width: 12rem;
@@ -36,7 +37,6 @@
       background: $raw-sienna;
       color: white;
       box-shadow: none;
-      
     }
   }
 
