@@ -11,9 +11,10 @@
 
       a {
         display: inline-block;
-        background: #fff;
+        background: #ece9e7;
+        border: 1px solid #ece9e7;
         border-radius: 4px;
-        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.05);
+        //box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.05);//
         color: $cod-gray;
         font-size: 1.3rem;
         padding: 1rem;
