@@ -8,6 +8,19 @@
   background-color: $linen;
   border-bottom: 1px solid $oyster-pink;
 
+  &-wwa {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 2rem 0;
+    font-size: $base-font-size;
+    color: $crail;
+    font-weight: bold;
+
+    &:hover {
+      color: $raw-sienna;
+    }
+  }
+
   &-img {
     width: 65%;
     margin: 2rem auto;
@@ -41,6 +54,104 @@
       margin: 1rem 0;
       font-size: 1.4rem;
       opacity: 0.85;
+    }
+  }
+}
+
+.wwa {
+  &-header {
+    background-color: $linen;
+
+    .wwa-header-container {
+      max-width: 800px;
+      margin: 0 auto;
+
+      .wwa-header {
+        &-img {
+          width: 15rem;
+          margin: 2rem 0;
+        }
+
+        &-description {
+          display: inline-block;
+          font-size: 1.8rem;
+          color: $raw-sienna;
+          margin-left: 3rem;
+        }
+      }
+    }
+  }
+
+  &-wrapper {
+    max-width: 800px;
+    margin: 3rem auto;
+    font-family: $base-font-family;
+
+    .wwa-heading {
+      color: $cornflower-blue;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .wwa-description {
+      margin-bottom: 5rem;
+      font-size: 1.6rem;
+    }
+
+    .wwa-cards-container {
+      display: flex;
+
+      .wwa-card {
+        overflow: hidden;
+        width: 400px;
+        border-radius: 6px;
+        background: #fff;
+        box-shadow: 0 1px 1px 1px rgba(10, 16, 34, 0.08);
+        color: #1b1b1b;
+        -webkit-transition: -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
+        -moz-transition: -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
+        -o-transition: -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
+        transition: -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        transition: -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
+        will-change: transform, box-shadow;
+
+        &:first-child {
+          margin-right: 5rem;
+        }
+
+        &-img-container {
+          position: relative;
+
+          .wwa-card-title {
+            position: absolute;
+            bottom: 0rem;
+            right: 10rem;
+            color: white;
+            font-weight: lighter;
+          }
+        }
+
+        &-content {
+          padding: 2.4rem 2.8rem 3.2rem;
+
+          .wwa-card-excerpt {
+            flex-grow: 1;
+            margin: 0;
+            font-size: 1.4rem;
+            line-height: 1.65;
+            opacity: 0.85;
+          }
+
+          .wwa-card-meta {
+            opacity: 0.8;
+            font-size: 1.3rem;
+            padding-top: 1.2rem;
+            margin-top: 2rem;
+            border-top: solid 1px #e4e4eb;
+          }
+        }
+      }
     }
   }
 }

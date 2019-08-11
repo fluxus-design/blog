@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{%- include head.html -%}
+
+<body>
+  <header class="wwa-header">
+    <div class="wwa-header-container">
+      <img class="wwa-header-img" src="..{{site.baseurl}}/assets/images/fluxus.png" alt="fluxus">
+      <span class="wwa-header-description">Sobre o Fluxus</span>
+    </div>
+  </header>
+
+
+  <main class="page-content" aria-label="Content">
+    <div class="wwa-wrapper">
+      <h1 class="wwa-heading">Sobre o Fluxus</h1>
+      <p class="wwa-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id consectetur velit blanditiis laboriosam totam
+        quidem
+        facilis nesciunt sit natus fugiat vitae, sunt eligendi excepturi provident beatae nihil ea saepe distinctio.</p>
+
+      <h1 class="wwa-heading">Desenvolvedoras</h1>
+      <div class="wwa-cards-container">
+        <div class="wwa-card" title="Juliana Scarpin">
+          <div class="wwa-card-img-container">
+            <img class="wwa-card-img" src="{{ site.baseurl }}/assets/images/blog-logo.jpg" alt="fota da Juliana Scarpin"
+              height="400" />
+            <h2 class="wwa-card-title">Juliana Scarpin</h2>
+          </div>
+
+          <div class="wwa-card-content">
+            <p class="wwa-card-excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quasi rem illo,
+              tenetur quod omnis veniam esse est iusto deserunt exercitationem aliquid quibusdam commodi eum ea iure?
+              Obcaecati, praesentium dicta?</p>
+
+            <div class="wwa-card-meta">
+              midias sociais
+            </div>
+          </div>
+        </div>
+
+        <div class="wwa-card" title="Fernanda Bertola">
+          <div class="wwa-card-img-container">
+            <img class="wwa-card-img" src="{{ site.baseurl }}/assets/images/blog-logo.jpg"
+              alt="fota da Fernanda Bertola" height="400" />
+            <h2 class="wwa-card-title">Fernanda Bertola</h2>
+          </div>
+
+          <div class="wwa-card-content">
+            <p class="wwa-card-excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quasi rem illo,
+              tenetur quod omnis veniam esse est iusto deserunt exercitationem aliquid quibusdam commodi eum ea iure?
+              Obcaecati, praesentium dicta?</p>
+
+            <div class="wwa-card-meta">
+              midias sociais
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+
+</html>
