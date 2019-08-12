@@ -11,7 +11,7 @@
   &-wwa {
     display: flex;
     justify-content: flex-end;
-    padding: 2rem 2rem 1rem;
+    padding: 2rem 4rem 1rem;;
     font-size: $base-font-size;
     color: $crail;
     font-weight: bold;
@@ -133,7 +133,7 @@
         }
 
         &-content {
-          padding: 2.4rem 2.8rem 3.2rem;
+          padding: 2.4rem 2.8rem 0;
 
           .wwa-card-excerpt {
             flex-grow: 1;
