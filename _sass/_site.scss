@@ -11,7 +11,7 @@
   &-wwa {
     display: flex;
     justify-content: flex-end;
-    padding: 1rem 2rem 0;
+    padding: 2rem 2rem 1rem;
     font-size: $base-font-size;
     color: $crail;
     font-weight: bold;
@@ -63,8 +63,9 @@
     background-color: $linen;
 
     .wwa-header-container {
-      max-width: 800px;
+      max-width: 700px;
       margin: 0 auto;
+      padding: 0 1.5rem;
 
       .wwa-header {
         &-img {
@@ -83,9 +84,10 @@
   }
 
   &-wrapper {
-    max-width: 800px;
+    max-width: 700px;
     margin: 3rem auto;
     font-family: $base-font-family;
+    padding: 0 1.5rem;
 
     .wwa-heading {
       color: $cornflower-blue;
@@ -99,11 +101,13 @@
     }
 
     .wwa-cards-container {
-      display: flex;
+      display: grid;
+      grid-gap: 2.4rem;
+      grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+      grid-auto-rows: 1fr;
 
       .wwa-card {
         overflow: hidden;
-        width: 400px;
         border-radius: 6px;
         background: #fff;
         box-shadow: 0 1px 1px 1px rgba(10, 16, 34, 0.08);
@@ -115,10 +119,6 @@
         transition: transform 0.2s ease, box-shadow 0.2s ease;
         transition: -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
         will-change: transform, box-shadow;
-
-        &:first-child {
-          margin-right: 5rem;
-        }
 
         &-img-container {
           position: relative;
@@ -149,6 +149,16 @@
             padding-top: 1.2rem;
             margin-top: 2rem;
             border-top: solid 1px #e4e4eb;
+
+            .wwa-social-media {
+              list-style: none;
+              display: flex;
+              justify-content: center;
+
+              li {
+                margin: 0 1rem;
+              }
+            }
           }
         }
       }
