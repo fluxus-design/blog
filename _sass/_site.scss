@@ -9,14 +9,18 @@
   border-bottom: 1px solid $oyster-pink;
 
   &-wwa {
-    float: right;
-    padding: 2rem 4rem 1rem;;
-    font-size: $base-font-size;
-    color: $crail;
-    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem 1.5rem 1rem;
 
-    &:hover {
-      color: $raw-sienna;
+    a {
+      font-size: 1.6rem;
+      color: #c55f3f;
+      font-weight: bold;
+
+      &:hover {
+        color: $raw-sienna;
+      }
     }
   }
 
@@ -66,6 +70,10 @@
       margin: 0 auto;
       padding: 0 1.5rem;
 
+      a {
+        display: inline-block;
+      }
+
       .wwa-header {
         &-img {
           width: 15rem;
@@ -77,6 +85,7 @@
           font-size: 1.8rem;
           color: $raw-sienna;
           margin-left: 3rem;
+          font-weight: bold;
         }
       }
     }
