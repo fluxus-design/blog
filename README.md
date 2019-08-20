@@ -20,7 +20,7 @@
   image: url-to-post-img
   link: url-to-post
   ---
-	```
+  ```
 
   **Note 1:** the initial and final dashes are required by Front Matter
   **Note 2:** the categories option accept one or more category separeted by single space: _e.g, category1 category2_
@@ -41,15 +41,15 @@
 
 1. Open `_includes/feed-filter.html` file
 2. If you need to create a new category
-  2.1. Right after que last existent category, add the code
+	1. Right after que last existent category, add the code
 
-  `<li><a href="#" class="newCategory">New Category</a></li>`
+    `<li><a href="#" class="newCategory">New Category</a></li>`
 
-  2.2. Replace the text _newCategory_ by your category id and, _New Category_ by your category name
+	2. Replace the text _newCategory_ by your category id and, _New Category_ by your category name
 
 3. If you need to update a category
-  3.1. Search for the category to be updated
-  3.2. Update the class attribute and category name on HTML
-  3.3. Update all the posts wich contains the previous category to the new category information
+	1. Search for the category to be updated
+	2. Update the class attribute and category name on HTML
+	3. Update all the posts wich contains the previous category to the new category information
 4. Update or create your post using the new or the updated category
 
